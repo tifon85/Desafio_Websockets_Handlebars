@@ -5,6 +5,7 @@ import viewsRouter from './routes/views.router.js'
 import { __dirname } from './utils.js'
 import { engine } from 'express-handlebars'
 import { Server } from 'socket.io'
+import { ProductManager } from './managers/ProductManager.js'
 
 const app = express()
 const port = 8080
@@ -32,14 +33,18 @@ const httpServer = app.listen(port,(error)=>{
 
 const socketServer = new Server(httpServer)//socketServer será un servidor para trabajar con sockets
 
-let products = []
-socketServer.on("connection", (socket) => {
-    socket.on("CreateProduct", (value) => {
-        products=[...products,value]
-        socketServer.emit("products", products);
+const prodManager = new ProductManager('./src/data/products.json')
+
+socketServer.on("connection", async (socket) => {
+
+    const products = await prodManager.getProducts()
+
+    socketServer.emit("products", products);
+
+    socket.on("CreateProduct", async (value) => {
+        await prodManager.addProducts(value)
     });
-    socket.on("deleteId", (value) => {
-        products=products.filter(item => item.id!=value)
-        socketServer.emit("products", products);
+    socket.on("deleteId", async (value) => {
+        await prodManager.deleteProduct(value)
     });
   });

@@ -22,17 +22,6 @@
 		"status": true
 	},
 	{
-		"title": "asd4",
-		"description": "asd4",
-		"code": "asd4",
-		"price": 14.23,
-		"stock": 12,
-		"category": "asd4",
-		"thumbnails": "asd4",
-		"id": 4,
-		"status": true
-	},
-	{
 		"title": "asd5",
 		"description": "asd5",
 		"code": "asd5",
@@ -41,6 +30,50 @@
 		"category": "asd5",
 		"thumbnails": "asd5",
 		"id": 5,
+		"status": true
+	},
+	{
+		"title": "asd6",
+		"description": "asd6",
+		"code": "asd6",
+		"price": "2",
+		"stock": "2",
+		"category": "asd6",
+		"thumbnails": "asd6",
+		"id": 6,
+		"status": true
+	},
+	{
+		"title": "asd6",
+		"description": "asd6",
+		"code": "asd6",
+		"price": "2",
+		"stock": "2",
+		"category": "asd6",
+		"thumbnails": "asd6",
+		"id": 7,
+		"status": true
+	},
+	{
+		"title": "sdf",
+		"description": "sdf",
+		"code": "sdf",
+		"price": "2",
+		"stock": "2",
+		"category": "sdf",
+		"thumbnails": "sdf",
+		"id": 10,
+		"status": true
+	},
+	{
+		"title": "sdf",
+		"description": "sdf",
+		"code": "sdf",
+		"price": "2",
+		"stock": "2",
+		"category": "sdf",
+		"thumbnails": "sdf",
+		"id": 11,
 		"status": true
 	}
 ]

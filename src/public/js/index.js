@@ -9,7 +9,6 @@ const inputPrice = document.getElementById("price");
 const inputStock = document.getElementById("stock");
 const inputCategory = document.getElementById("category");
 const inputThumbnails = document.getElementById("thumbnails");
-const inputID = document.getElementById("idAlta");
 
 formAlta.onsubmit = (e) => {
   e.preventDefault();
@@ -21,7 +20,6 @@ formAlta.onsubmit = (e) => {
     stock: inputStock.value,
     category: inputCategory.value,
     thumbnails: inputThumbnails.value,
-    id: inputID.value,
   }
   socketClient.emit("CreateProduct", product);
 };
